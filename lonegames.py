@@ -4,8 +4,8 @@ import logging
 import random
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-token = '1359708375:AAFqmdoheGs3qZFbC22bAUCFgvSr-D-vwOw'  ##testbot
-tokenv = '1268778992:AAHXF24_4ZuEqhPe9OKFVczDy54VAdTY-tg'
+tokenv = ''  ##testbot
+token = ''
 updater = Updater(token=token, use_context=True)
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -19,15 +19,6 @@ class playerR1:
         self.username = username
         self.lives = lives
 
-players = [playerR1('test', '@talitagigi', [12, 18, 22, 26]),
-            playerR1('test', '@tiagoflexa', [3, 7, 13, 27]),
-            playerR1('test', '@daniestx', [9, 18, 22, 24]),
-            playerR1('test', '@LeGEOnina', [2, 13, 20, 27]),
-            playerR1('test', '@plsnchs', [6, 12, 20, 30]),
-            playerR1('test', '@Bijuoo', [4, 6, 17, 26]),
-            playerR1('test', '@karidodente', [6, 20, 24, 30]),
-            playerR1('test', '@tiptopper', [8, 9, 18, 19])
-           ]
 
 
 
@@ -457,7 +448,7 @@ dispatcher.add_handler(CommandHandler('sorteados', sorteados))
 
 #dispatcher.add_handler(CommandHandler('restaum', startRestaUm))
 #dispatcher.add_handler(CommandHandler('adicionar', adicionar))
-dispatcher.add_handler(CommandHandler('restaum', adicionarlista))
-dispatcher.add_handler(CommandHandler('eliminar', eliminar))
+#dispatcher.add_handler(CommandHandler('restaum', adicionarlista))
+#dispatcher.add_handler(CommandHandler('eliminar', eliminar))
 
 updater.start_polling()
